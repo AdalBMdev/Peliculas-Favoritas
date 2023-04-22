@@ -1,0 +1,1 @@
+El front debe ubicarse en htdocs en la carpeta de xampp ya que utiliza php

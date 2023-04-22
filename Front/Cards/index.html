@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://kit.fontawesome.com/9d699014b9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-3jBHZu7Vx07bOMuQPlVHnLIeTVK7VtgX/Mm0n7V3qKjOTi/5c5W+BPK/7KPO1bFLKfcjlZ9N4t4/YnyiKjfdQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cards movies</title>
+</head>
+
+<body>
+
+  <div class="contenedor-pag">
+    <a href="#modal" id="modalSave"class="btn-open-popup">+</a>
+    <a href="#modal" id="openmodal" class="btn-open-popup">+</a>
+    
+    <div class="container-all" id="modal">
+
+    
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <img src="imagenes/jinx.png" alt="" id="img_profile">
+        <p class="navbar-brand" id="nickname" href="#">-Nickname</p>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" id="gender">Agregar generos<i class="fas fa-film"></i></a>
+        </li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="input-box">
+          <input type="text" id="filtroInput" autocomplete="off" required class="linea">
+        </div>
+
+        <div class="input-box m-lg-3">
+          <select class="form-control" id="filtro">
+            <option value="1">Todos</option>
+            <option value="2">Titulo</option>
+            <option value="3">Año</option>
+            <option value="4">Director</option>
+            <option value="5">Genero</option>
+          </select>
+        </div>
+        <a class="nav-link active" aria-current="page" href="#" id="filtroButton"><i class="fas fa-search"></i></a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            
+            <!-- Agrega la clase "ms-auto" para centrar los botones -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" id="logout">Cerrar sesión<i class="fas fa-sign-in-alt"></i></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+      <div class="popup">
+        <div class="img" id="img"></div>
+        <div class="container-text">
+          <h1>Peliculas</h1>
+          <form method="post" action="poster.php" id="form">
+            <div class="input-box">
+              <input type="text" id="Titulo" autocomplete="off" required class="linea">
+              <label class="label-input" >Titulo</label>
+            </div>
+            <div class="input-box">
+              <input type="text" id="Director" autocomplete="off" required class="linea">
+              <label class="label-input">Director</label>
+            </div>
+
+            <div class="input-box">
+              <select class="form-control" id="Genero">
+   
+              </select>
+            </div>
+            <div class="input-box">
+
+              <input type="file" accept="image/*" class="form-control" name="Poster" id="Poster">
+
+            </div>
+            <div class="input-box">
+              <input type="date" id="Año" required class="linea">
+            </div>
+            <button type="submit" class="btn" id="enviarP">Guardar</button>
+          </form>
+          <form action="poster.php"  id="formPut">
+            <button type="submit" class="btn" id="editar" >Editar</button>
+          </form>
+        </div>
+        <a href="#" id="closeModal" class="btn-close-popup">X</a>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="contenedor-principal d-flex justify-content-center" >
+
+    <div class="container mt-5">
+      <div class="mt-5"></div>
+
+      <div id="peliculas-container" class="row">
+        <div class="mt-5"></div>
+
+        <!-- Las cartas se generarán aquí -->
+      </div>
+    </div>
+
+  </div>
+
+
+  
+  
+
+  <script src="cartas.js"></script>
+  <script src="logout.js"></script>
+  <script src="generosInput.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trailers Web</title>
+    <script src="http://kit.fontawesome.com/9d699014b9.js" crossorigin="anonymous"></script>
+    
+    <link rel="shortcut icon" href="Assets/img/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+ 
+</head>
+
+<body>
+    <header>
+        <div class="nav container">
+     
+            <!--navbar-->
+            <div class="navbar">
+                <a href="../Cards/index.html" class="nav-link nav-active">
+                    <i class='bx bx-home'></i>
+                    <span class="nav-link-title">Home</span>
+                </a>
+                <a href="#" class="nav-link nav-active" id="agregar">
+                    <i class='bx bx-add-to-queue'></i>
+                    <span class="nav-link-title">Agregar</span>
+                </a>
+            </div>
+            
+        </div>
+    </header>
+    <section class="form-register" id="seccionAdd">
+        <h4>Agregar <span class="adm">Genero</span></h4> 
+        <form action="" method="post" id="form-genero" autocomplete="off">
+            <input class="controls" type="text" id="genero" placeholder="Ingresa el genero">
+            <input class="botons" id="enviarLogin" type="submit" value="Ingresar">
+        </form>
+    </section>
+    <section class="form-register" id="seccionEdit">
+        <h4>Editar <span class="adm">Genero</span></h4> 
+        <form action="" method="post" id="form-edit" autocomplete="off">
+            <input class="controls" type="text" id="generoE" placeholder="Ingresa el genero">
+            <input class="botons" id="enviarEdit" type="submit" value="Ingresar">
+        </form>
+    </section>
+    <section id="tabla">
+
+    </section>
+
+<script src="Genero.js"></script>
+</body>
+
+</html>
